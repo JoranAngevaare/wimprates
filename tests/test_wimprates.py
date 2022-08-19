@@ -44,7 +44,7 @@ def test_spindependent():
 
 def test_migdal():
     isclose(wr.rate_wimp_std(1, detection_mechanism='migdal', **opts),
-            0.2610240963512907)
+            0.2615654952709099)
 
 
 def test_brems():
