@@ -54,7 +54,7 @@ def _default_shells(material):
         # For Xe, only consider n=3 and n=4
         # n=5 is the valence band so unreliable in liquid
         # n=1,2 contribute very little
-        Xe=['3*', '4*'],
+        Xe=['3*', '4*', '5_0'],
         # TODO, what are realistic values for Ar?
         Ar=['2*'],
         # EDELWEIS
