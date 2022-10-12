@@ -7,7 +7,7 @@ import numpy as np
 
 
 def test_shm_values():
-    halo_model = StandardHaloModel()
+    halo_model = StandardHaloModel(v_0 = 220 * (nu.km/nu.s))
     assert np.abs(halo_model.v_0 /(nu.km/nu.s) - 220.)<1e-6
     assert np.abs(halo_model.v_esc /(nu.km/nu.s) - 544.)<1e-6
 

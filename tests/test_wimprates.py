@@ -12,9 +12,11 @@ import unittest
 
 
 class TestBenchmarks(unittest.TestCase):
-    opts = dict(mw=50, sigma_nucleon=1e-45)
+    opts = dict(mw=50,
+                sigma_nucleon=1e-45,
+                halo_model = wr.StandardHaloModel(v_0 = 220 * (nu.km/nu.s)))
     def test_elastic(self):
-        ref = 33.052499179451
+        ref = 33.03773075209141
 
         self.assertAlmostEqual(wr.rate_wimp_std(1, **self.opts), ref)
 
@@ -45,7 +47,7 @@ class TestBenchmarks(unittest.TestCase):
 
     def test_brems(self):
         self.assertAlmostEqual(wr.rate_wimp_std(1, detection_mechanism='bremsstrahlung', **self.opts),
-                0.00017137557193256555)
+                0.00017145547179066338)
 
 
     def test_dme(self):
